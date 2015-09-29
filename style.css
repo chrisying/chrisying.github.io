@@ -30,3 +30,34 @@ html, body, #tbl_wrap {
     animation-delay: 0.5s;
     animation-fill-mode: forwards;
 }
+
+@keyframes init_board_in {
+    from {
+        height: 0px;
+    }
+    to {
+        height: 100px;
+    }
+}
+
+#button_board {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    animation-name: init_board_in;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+.menu_button {
+    color: #BCC0C5;
+    animation-name: init_fade_in;
+    animation-duration: 1.5s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+.material-icons {
+    font-size: 36px;
+}
