@@ -61,3 +61,13 @@ html, body, #tbl_wrap {
 .material-icons {
     font-size: 36px;
 }
+
+@keyframes fade_out {
+    from {
+        color: #57626D;
+    }
+    to {
+        color: #BCC0C5;
+    }
+}
+
