@@ -1,6 +1,6 @@
 /* CSS for index page */
 
-html, body, #tbl_wrap {
+html {
     height: 100%;
     width: 100%;
     padding: 0;
@@ -8,9 +8,12 @@ html, body, #tbl_wrap {
     background-color: #BCC0C5;
 }
 
-#td_wrap {
-    vertical-align: middle;
-    text-align: center;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100%;
+    flex-direction: column;
 }
 
 @keyframes init_fade_in {
@@ -25,7 +28,7 @@ html, body, #tbl_wrap {
 #main_name {
     color: #BCC0C5;
     font-family: 'Roboto', sans-serif;
-    font-size: 3.5em;
+    font-size: 4.5em;
     animation-name: init_fade_in;
     animation-duration: 2s;
     animation-delay: 0.5s;
@@ -34,17 +37,21 @@ html, body, #tbl_wrap {
 
 @keyframes init_board_in {
     from {
-        height: 0px;
+        height: 0%;
     }
     to {
-        height: 100px;
+        height: 10%;
     }
 }
 
 #button_board {
-    margin: auto;
-    width: 50%;
-    padding: 10px;
+    height: 0%;
+    width: 40%;
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     animation-name: init_board_in;
     animation-duration: 1s;
     animation-delay: 1.5s;
@@ -52,6 +59,7 @@ html, body, #tbl_wrap {
 }
 
 .menu_button {
+    height: 100%;
     color: #BCC0C5;
     animation-name: init_fade_in;
     animation-duration: 1.5s;
@@ -60,7 +68,7 @@ html, body, #tbl_wrap {
 }
 
 .material-icons {
-    font-size: 36px;
+    font-size: 48px;
 }
 
 @keyframes fade_out {
