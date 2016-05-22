@@ -1,73 +1,107 @@
+/* CSS for all non-index pages */
 
-html, body, #tbl_wrap {
-    height: 100%;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    background-color: #BCC0C5;
-}
-
-#td_wrap {
-    vertical-align: middle;
-    text-align: center;
-}
-
-@keyframes init_fade_in {
+/* Additional CSS */
+@keyframes fade_in_with_border {
     from {
-        color: #BCC0C5;
+        color: #57626D;
+        border: 2px solid #57626D;
     }
     to {
-        color: #57626D;
+        color: #BCC0C5;
+        border: 2px solid #BCC0C5;
     }
 }
 
-#main_name {
+@keyframes no_animation {
+}
+
+#head_name {
+    height: auto;
     color: #BCC0C5;
     font-family: 'Roboto', sans-serif;
-    font-size: 3.5em;
-    animation-name: init_fade_in;
-    animation-duration: 2s;
-    animation-delay: 0.5s;
+    font-size: 2em;
+    padding: 15px;
+    margin: 20px;
+    border-radius: 2px;
+    border: 2px solid #BCC0C5;
+    display: inline-block;
+    animation-name: fade_in_with_border;
+    animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }
 
-@keyframes init_board_in {
-    from {
-        height: 0px;
-    }
-    to {
-        height: 100px;
-    }
+.material-icons { color: rgba(87, 98, 109, 1.0); }
+.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-inactive { color: rgba(87, 98, 109, 0.4); }
+
+/* ---Everything below this line is modified template code--- */
+
+/* Layout */
+body {
+    min-width: 450px;
 }
 
-#button_board {
-    margin: auto;
-    width: 50%;
-    padding: 10px;
-    animation-name: init_board_in;
-    animation-duration: 1s;
-    animation-delay: 1.5s;
-    animation-fill-mode: forwards;
+#container {
+    padding-left: 150px;
+    padding-right: 200px;
 }
 
-.menu_button {
-    color: #BCC0C5;
-    animation-name: init_fade_in;
-    animation-duration: 1.5s;
-    animation-delay: 2s;
-    animation-fill-mode: forwards;
+#container .column {
+    position: relative;
+    float: left;
 }
 
-.material-icons {
-    font-size: 36px;
+#center {
+    padding: 10px 20px;
+    width: 100%;
 }
 
-@keyframes fade_out {
-    from {
-        color: #57626D;
-    }
-    to {
-        color: #BCC0C5;
-    }
+#left {
+    width: 100px;
+    padding-left: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    right: 190px;
+    margin-left: -100%;
+    border: 4px solid #57626D;
+    top: -4px;
 }
 
+#right {
+    width: 100px;
+    padding: 0 10px;
+    padding-right: 50px;
+    margin-right: -100%;
+}
+
+/* Aesthetics */
+body {
+    margin: 0;
+    padding: 0;
+    background: #BCC0C5;
+    color: #57626D;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2em;
+}
+
+#header {
+    font-size: large;
+    background: #57626D;
+}
+
+#left {
+    background: #BCC0C5;
+}
+
+#right {
+    background: #BCC0C5;
+}
+
+#center {
+    background: #BCC0C5;
+}
+/*
+#container .column {
+    padding-top: 1em;
+}
+*/

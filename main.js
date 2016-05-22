@@ -17,15 +17,30 @@ function fade_out() {
 
 function load_about() {
     fade_out();
-    setTimeout(function() {window.location = "about.html";}, 1000);
+    setTimeout(function() {window.location = "about.html";}, 600);
 }
 
 function load_links() {
     fade_out();
-    setTimeout(function() {window.location = "links.html";}, 1000);
+    setTimeout(function() {window.location = "links.html";}, 600);
 }
 
 function load_contact() {
     fade_out();
-    setTimeout(function() {window.location = "contact.html";}, 1000);
+    setTimeout(function() {window.location = "contact.html";}, 600);
 }
+
+function mouse_name_enter() {
+    var e = document.getElementById("head_name");
+    e.style.animationName = "no_animation";
+    e.style.color = "#57626D";
+    e.style.backgroundColor = "#BCC0C5";
+    e.style.border = "2px solid #BCC0C5";
+}
+
+function mouse_name_exit() {
+    var e = document.getElementById("head_name");
+    e.style.color = "#BCC0C5";
+    e.style.backgroundColor = "#57626D";
+}
+
