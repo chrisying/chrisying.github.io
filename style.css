@@ -38,17 +38,17 @@
     }
     to {
         width: 80%;
-        height: 60%;
+        height: 70%;
         border-color: #57626D;
     }
 }
 
 @keyframes shrink_name {
     from {
-        font-size: 4.5em;
+        font-size: 10vh;
     }
     to {
-        font-size: 3em;
+        font-size: 5vh;
     }
 }
 
@@ -75,7 +75,7 @@ body {
 #main_name {
     color: #BCC0C5;
     font-family: 'Roboto', sans-serif;
-    font-size: 4.5em;
+    font-size: 10vh;
     animation-name: init_fade_in;
     animation-duration: 2s;
     animation-delay: 0.5s;
@@ -85,6 +85,7 @@ body {
 #button_board {
     height: 0%;
     width: 40%;
+    padding-top: 1%;
     padding-bottom: 2%;
     display: flex;
     flex-direction: row;
@@ -106,7 +107,7 @@ body {
 }
 
 .material-icons {
-    font-size: 3em;
+    font-size: 8vh;
     border-width: 3px;
     border-radius: 5px;
     border-color: #57626D;
