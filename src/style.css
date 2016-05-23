@@ -158,3 +158,15 @@ body {
     font-size: 7vh;
 }
 
+.subtitle {
+    display: inline;
+    font-weight: bold;
+}
+
+ul {
+    margin: 0%;
+}
+
+li {
+    margin: 1vh;
+}

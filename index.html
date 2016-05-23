@@ -1,11 +1,12 @@
-<!DOCTYPE html> <html>
+<!DOCTYPE html>
+<html>
     <head>
         <title>chrisying.net</title>
         <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="konami.js"></script>
-        <script src="main.js"></script>
+        <link rel="stylesheet" type="text/css" href="src/style.css">
+        <script src="src/konami.js"></script>
+        <script src="src/main.js"></script>
     </head>
     <body>
         <div id="main_name" onclick="location.href='index.html'">
@@ -40,7 +41,28 @@
                 <div class="title">
                     links
                 </div>
-                Coming soon!
+                <ul>
+                    <li>
+                    <div class="subtitle">Improving Event Coreference using Knowledge Bases</div>
+                    <br>
+                    Utilize knowledge bases like YAGO and DBpedia to improve event coreference. See research poster <a href="static/coref-poster.pdf">here</a>.
+                    </li>
+                    <li>
+                    <div class="subtitle">ParaBDD: Parallel Binary Decision Diagrams for Efficient Model Checking</div>
+                    <br>
+                    Parallel BDD library using Intel CilkPlus and lockless hash tables. See writeup <a href="http://chrisying.net/parabdd">here</a>.
+                    </li>
+                    <li>
+                    <div class="subtitle">Hypercube: Breaking the 4th Wall in Minecraft</div>
+                    <br>
+                    Minecraft mod which adds a block that interacts with a real-world light. See video demo <a href="https://www.youtube.com/watch?v=VK8OlyFX7AM">here</a>
+                    </li>
+                    <li>
+                    <div class="subtitle">PacAttack</div>
+                    <br>
+                    PaperJS-based web game that utilizes flocking behavior to create interesting mechanics. Play the game <a href="https://www.contrib.andrew.cmu.edu/~cying/pacattack/">here</a>.
+                    </li>
+                </ul>
             </div>
             <div id="photos" class="content">
                 <div class="title">
@@ -52,9 +74,11 @@
                 <div class="title">
                     contact
                 </div>
-                Please email me at: <div style="display:inline;font-weight:bold">contact AT chrisying DOT net</div>
+                Please email me at: <div class="subtitle">contact AT chrisying DOT net</div>.
                 <br><br>
-                My resume can be found <a href="chrisying-resume-s16.pdf">here</a>
+                My Github profile: <a href="https://github.com/chrisying">chrisying</a>.
+                <br><br>
+                My resume can be found <a href="static/chrisying-resume-s16.pdf">here</a>.
             </div>
         </div>
     </body>
