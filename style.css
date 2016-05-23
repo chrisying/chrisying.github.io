@@ -46,7 +46,8 @@
 @keyframes shrink_name {
     from {
         font-size: 4.5em;
-    } to {
+    }
+    to {
         font-size: 3em;
     }
 }
