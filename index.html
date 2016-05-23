@@ -3,7 +3,7 @@
         <title>chrisying.net</title>
         <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <script src="main.js"></script>
     </head>
     <body>
@@ -12,32 +12,49 @@
         </div>
         <div id="button_board">
             <div class="menu_button">
-                <i class="material-icons" onclick="load_about()">person</i>
+                <i id="about_button" class="material-icons" onclick="load_about()">person</i>
             </div>
             <div class="menu_button">
-                <i class="material-icons" onclick="load_links()">star</i>
+                <i id="links_button" class="material-icons" onclick="load_links()">star</i>
             </div>
             <div class="menu_button">
-                <i class="material-icons" onclick="load_contact()">email</i>
+                <i id="photos_button" class="material-icons" onclick="load_photos()">photo_camera</i>
+            </div>
+            <div class="menu_button">
+                <i id="contact_button" class="material-icons" onclick="load_contact()">email</i>
             </div>
         </div>
-        <!--
-        <table id="button_board">
-            <tr>
-                <td><div class="menu_button">
-                        <i class="material-icons" onclick="load_about()">person</i>
-                    </div>
-                </td>
-                <td><div class="menu_button">
-                        <i class="material-icons" onclick="load_links()">star</i>
-                    </div>
-                </td>
-                <td><div class="menu_button">
-                        <i class="material-icons" onclick="load_contact()">email</i>
-                    </div>
-                </td>
-            </tr>
-        </table>
-        -->
+        <div id="content_box">
+            <div id="about" class="content">
+                <div class="title">
+                    about
+                </div>
+                I'm currently pursuing a Masters Degree in Machine Learning at Carnegie Mellon University. I graduated from CMU's School of Computer Science in 2016. Over the past few summers, I have worked at Google, in Seattle and Mountain View, and Dropbox in San Francisco.
+                <br><br>
+                My research interests are deep learning, natural language processing, and computer vision. I'm particularly interested in designing large systems for performing machine learning at scale.
+                <br><br>
+                Outside of academia, I'm an amateur photographer and a fan of anything nature-related (hiking, camping, and anything new!).
+            </div>
+            <div id="links" class="content">
+                <div class="title">
+                    links
+                </div>
+                Coming soon!
+            </div>
+            <div id="photos" class="content">
+                <div class="title">
+                    photos
+                </div>
+                Coming soon!
+            </div>
+            <div id="contact" class="content">
+                <div class="title">
+                    contact
+                </div>
+                Please email me at: <div style="display:inline;font-weight:bold">contact AT chrisying DOT net</div>
+                <br><br>
+                My resume can be found <a href="resume.pdf">here</a>
+            </div>
+        </div>
     </body>
 </html>
