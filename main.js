@@ -14,6 +14,8 @@ function expand_content() {
     n.style.animationDuration = "0.5s";
     n.style.animationDelay = "0s";
     n.style.animationFillMode = "forwards";
+    n.style.animationIterationCount = "1";
+    setTimeout(function() { n.style.fontSize = "5vh"; }, 500);
 }
 
 function load_about() {
@@ -160,3 +162,13 @@ function load_contact() {
     curState = 4;
 }
 
+var easter_egg = new Konami(function() {
+    var e = document.getElementById("main_name");
+/*
+    e.style.animationName = "rainbow";
+    e.style.animationDuration = "1s";
+    e.style.animationDelay = "0s";
+    e.style.animationStyle = "infinite";
+*/
+    e.style.animation = "rainbow 1s infinite";
+});
