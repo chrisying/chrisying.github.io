@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>chrisying.net</title>
+        <title>Chris Yingt</title>
         <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="src/style.css">
-        <script src="src/konami.js"></script>
-        <script src="src/main.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="konami.js"></script>
+        <script src="main.js"></script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -19,98 +19,231 @@
     </head>
     <body>
         <div id="main_name" onclick="location.href='index.html'">
-            chris ying
+            Chris Ying
         </div>
         <div id="button_board">
             <div class="menu_button">
-                <i id="about_button" class="material-icons" onclick="load_about()">person</i>
+                <i id="about_button" class="material-icons" onclick="load_content('about')">person</i>
             </div>
             <div class="menu_button">
-                <i id="links_button" class="material-icons" onclick="load_links()">star</i>
+                <i id="projects_button" class="material-icons" onclick="load_content('projects')">star</i>
             </div>
             <div class="menu_button">
-                <i id="blog_button" class="material-icons" onclick="load_blog()">speaker_notes</i>
+                <i id="blog_button" class="material-icons" onclick="load_content('blog')">speaker_notes</i>
             </div>
             <div class="menu_button">
-                <i id="photos_button" class="material-icons" onclick="load_photos()">photo_camera</i>
-            </div>
-            <div class="menu_button">
-                <i id="contact_button" class="material-icons" onclick="load_contact()">email</i>
+                <i id="contact_button" class="material-icons" onclick="load_content('contact')">email</i>
             </div>
         </div>
         <div id="content_box">
             <div id="about" class="content">
                 <div class="title">
-                    about
+                    About
                 </div>
-                I'm currently working as a Research Software Engineer at Google Brain.
-                I graduated in 2017 with a M.S. in Machine Learning from Carnegie Mellon University's Machine Learning Department.
-                Before that, I completed my B.S. in Computer Science (minor in ML) also at CMU.
-                Over the past few summers, I've worked at Google in Seattle, Google in Mountain View, and Dropbox in San Francisco.
+                I'm currently an Applied Research Scientist and employee #7 at
+                Ambient.ai. I work on building computer vision models that
+                understand scenes from video in real-time.
                 <br><br>
-                My research interests are deep learning, computer vision, and large scale machine learning.
-                I'm currently working on research in efficiently utilizing extremely large amounts of compute to accelerate and improve current deep learning techniques.
+                Previously, I've worked as a Research Engineer at Google Brain,
+                publishing research in large-scale distributed training and
+                neural architecture search. 
                 <br><br>
-                Outside of work and academia, I'm an amateur photographer and a fan of anything nature-related (hiking, camping, and anything new!).
-            </div>
-            <div id="links" class="content">
-                <div class="title">
-                    links
-                </div>
+                I completed my M.S. in Machine Learning at Carnegie Mellon
+                University in 2017. Prior to that, I obtained my B.S. in
+                Computer Science also at CMU in 2017.
+                <br><br>
+                My research interests are:
                 <ul>
+                    <li>Solving multi-task problems in computer vision using
+                        compositional data primitives.</li>
+                    <li>Using "outer-loop" optimization techniques like
+                        evolution to search for more accurate and efficient
+                        neural architectures.</li>
+                    <li>Combining the fields of deep learning and
+                        high-performance computing to train larger and faster
+                        neural networks.</li>
+                    <li>Applying machine learning techniques to solve the
+                        climate crisis.</li>
+                </ul>
+                <br>
+                Outside of work and academia, I'm an amateur photographer and a
+                fan of anything outdoors (e.g. hiking, biking, camping). Fun
+                fact: I really enjoy playing Dance Dance Revolution.
+            </div>
+            <div id="projects" class="content">
+                <div class="title">
+                    Research and Projects
+                </div>
+                <ul class="spaced_list">
                     <li>
-                    <div class="subtitle">Adaptive Depth Computational Policies for Visual Tracking</div>
-                    <br>
-                    Multi-depth fully convolutional Siamese network with conditional computation to adaptively determine network depth during computation, applied to visual tracking on VOT2016 dataset. Published in EMMCVPR 2017.<a href="static/adcpfvt-poster.pdf">[research poster]</a>
+                        <div class="subtitle">
+                            NAS-Bench-101: Towards Reproducible Neural Architecture Search
+                        </div>
+                        <br>
+                        <b>Chris Ying</b>, Aaron Klein, Esteban Real, Eric
+                        Christiansen, Kevin Murphy, Frank Hutter
+                        <hr>
+                        NAS-Bench-101 is the first large-scale neural
+                        architecture search benchmark dataset, with over 423K
+                        unique architectures and 5M trained models. This
+                        dataset enables researchers to test their NAS
+                        algorithms in milliseconds by querying a pre-computed
+                        tabular dataset.
+                        <b>ICML 2019</b>
+                        <br>
+                        <a href="https://arxiv.org/abs/1902.09635">[arXiv]</a>
+                        &nbsp;
+                        <a href="static/nasbench-poster.pdf">[poster]</a>
                     </li>
                     <li>
-                    <div class="subtitle">Improving Event Coreference using Knowledge Bases</div>
-                    <br>
-                    Utilize knowledge bases like YAGO and DBpedia to improve event coreference. <a href="static/coref-poster.pdf">[research poster]</a>.
+                        <div class="subtitle">
+                            Image Classification at Supercomputer Scale
+                        </div>
+                        <br>
+                        <b>Chris Ying</b>, Sameer Kumar, Dehao Chen, Tao Wang,
+                        Youlong Cheng
+                        <hr>
+                        Utilized distributed batch normalization, input
+                        pipeline optimizations, and 2D torus all-reduce to
+                        train ResNet-50 at petaFLOPS scale on a TPUv3 pod. We
+                        achieve 76.3% accuracy in 2.2 minutes, with throughput
+                        of over 1.05M images per second.
+                        <b>NeurIPS 2018 Systems for ML</b>
+                        <br>
+                        <a href="https://arxiv.org/abs/1811.06992">[arXiv]</a>
                     </li>
                     <li>
-                    <div class="subtitle">ParaBDD: Parallel Binary Decision Diagrams for Efficient Model Checking</div>
-                    <br>
-                    Parallel BDD library using Intel CilkPlus and lockless hash tables. <a href="http://chrisying.net/parabdd">[writeup]</a>.
+                        <div class="subtitle">
+                            Depth-Adaptive Computational Policies for Efficient Visual Tracking
+                        </div>
+                        <br>
+                        <b>Chris Ying</b>, Katerina Fragkiadaki
+                        <hr>
+                        Proposed multi-depth fully convoltuional Siamese
+                        networks with parametric gating to perform efficient
+                        visual tracking. We train with a custom soft-budgeting
+                        joint loss but run inference with conditional
+                        computation to reduce runtime cost.
+                        <b>EMMCVPR 2017</b>
+                        <br>
+                        <a href="https://arxiv.org/abs/1801.00508">[arXiv]</a>
+                        &nbsp;
+                        <a href="static/adcpfvt-poster.pdf">[poster]</a>
                     </li>
                     <li>
-                    <div class="subtitle">Hypercube: Breaking the 4th Wall in Minecraft</div>
-                    <br>
-                    Minecraft mod which adds a block that interacts with a real-world light. <a href="https://www.youtube.com/watch?v=VK8OlyFX7AM">[video demo]</a>.
+                        <div class="subtitle">
+                            Don't Decay the Learning Rate, Increase the Batch Size
+                        </div>
+                        <br>
+                        Samuel L. Smith, Pieter-Jan Kindermans, <b>Chris
+                        Ying</b>, Quoc V. Le
+                        <hr>
+                        Demonstrated both theoretically and practically that
+                        learning rate, momentum, and batch size are closely
+                        related and proposes an alternate strategy for training
+                        which enables larger batch training without accuracy
+                        loss.
+                        <b>ICLR 2018</b>
+                        <br>
+                        <a href="https://arxiv.org/abs/1711.00489">[arXiv]</a>
                     </li>
                     <li>
-                    <div class="subtitle">PacAttack</div>
-                    <br>
-                    PaperJS-based web game that utilizes flocking behavior to create interesting mechanics. <a href="https://www.contrib.andrew.cmu.edu/~cying/pacattack/">[play game]</a>.
+                        <div class="subtitle">
+                            Large-Batch Training for LSTM and Beyond
+                        </div>
+                        <br>
+                        Yang You, Jonathan Hseu, <b>Chris Ying</b>, James
+                        Demmel, Kurt Keutzer, Cho-Jui Hsieh
+                        <hr>
+                        Developed a novel warmup scheme for training neural
+                        networks at extremely large batch sizes which enables
+                        speeding up training on large distributed systems
+                        without accuracy loss.
+                        <br>
+                        <a href="https://arxiv.org/abs/1901.08256">[arXiv]</a>
                     </li>
                     <li>
-                    <div class="subtitle">Pulsr: Audience Sentiment Tracking App</div>
-                    <br>
-                    Audience sentiment tracking web app using Firebase and Google Graph API. <a href="https://github.com/chrisying/pulsr">[code]</a>.
+                        <div class="subtitle">
+                            Enumerating Unique Computational Graphs via an
+                            Iterative Graph Invariant
+                        </div>
+                        <br>
+                        <b>Chris Ying</b>
+                        <hr>
+                        Proposed a novel iterative graph invariant for
+                        identifying unique computational graphs (colored
+                        directed acyclic graphs). This algorithm can be used
+                        for identifying computationally unique neural networks.
+                        <br>
+                        <a href="https://arxiv.org/abs/1902.06192">[arXiv]</a>
+                    </li>
+                    <li>
+                        <div class="subtitle">
+                            Improving Event Coreference using Knowledge Bases
+                        </div>
+                        <br>
+                        <b>Chris Ying</b>, Bishan Yang
+                        <hr>
+                        Utilize knowledge bases like YAGO and DBpedia to improve
+                        event coreference.
+                        <br>
+                        <a href="static/coref-poster.pdf">[research poster]</a>
+                    </li>
+                    <li>
+                        <div class="subtitle">
+                            ParaBDD: Parallel Binary Decision Diagrams for
+                            Efficient Model Checking
+                        </div>
+                        <br>
+                        <b>Chris Ying</b>, Matt Bryant
+                        <hr>
+                        Parallel BDD library using Intel CilkPlus and lockless
+                        hash tables.
+                        <br>
+                        <a href="http://chrisying.net/parabdd">[Writeup]</a>
+                    </li>
+                    <li>
+                        <div class="subtitle">
+                            Hypercube: Breaking the 4th Wall in Minecraft
+                        </div>
+                        <br>
+                        <b>Chris Ying</b>, Andrew Benson
+                        <hr>
+                        Minecraft mod which adds a custom block that controls
+                        with a real-world light.
+                        <br>
+                        <a href="https://www.youtube.com/watch?v=VK8OlyFX7AM">[YouTube demo]</a>
+                    </li>
+                    <li>
+                        <div class="subtitle">
+                            PacAttack
+                        </div>
+                        <br>
+                        <b>Chris Ying</b>, Taehoon Lee
+                        <hr>
+                        PaperJS-based web game that utilizes flocking behavior
+                        to create interesting emergent mechanics.
+                        <br>
+                        <a href="https://www.contrib.andrew.cmu.edu/~cying/pacattack/">[Play
+                    game]</a>
                     </li>
                 </ul>
             </div>
-            <div id="photos" class="content">
-                <div class="title">
-                    photos
-                </div>
-                Coming soon!
-            </div>
             <div id="blog" class="content">
                 <div class="title">
-                    blog
+                    Blog
                 </div>
-                Coming soon!
+                Coming soon&trade;!
             </div>
             <div id="contact" class="content">
                 <div class="title">
-                    contact
+                    Contact
                 </div>
-                Please email me at: <div class="subtitle">contact AT chrisying DOT net</div>.
+                Email: contact (AT) chrisying (DOT) net
                 <br><br>
-                My Github profile: <a href="https://github.com/chrisying">chrisying</a>.
+                Github: <a href="https://github.com/chrisying">@chrisying</a>
                 <br><br>
-                My r&#233sum&#233 can be found <a href="static/chrisying-resume.pdf">here</a> (currently out-of-date).
+                R&#233sum&#233: <a href="static/chrisying-resume.pdf">Click here</a> (last updated 2019 Q4)
             </div>
         </div>
     </body>

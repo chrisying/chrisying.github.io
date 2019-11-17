@@ -1,14 +1,14 @@
 /* CSS for the entire page
- * Background color: #BCC0C5
- * Foreground color: #57626D
+ * Background color: #CCCCCC
+ * Foreground color: #555555
  */
 
 @keyframes init_fade_in {
     from {
-        color: #BCC0C5;
+        color: #CCCCCC;
     }
     to {
-        color: #57626D;
+        color: #555555;
     }
 }
 
@@ -23,10 +23,10 @@
 
 @keyframes fade_out {
     from {
-        color: #57626D;
+        color: #555555;
     }
     to {
-        color: #BCC0C5;
+        color: #CCCCCC;
     }
 }
 
@@ -34,12 +34,12 @@
     from {
         width: 0%;
         height: 0%;
-        border-color: #BCC0C5;
+        border-color: #CCCCCC;
     }
     to {
-        width: 80%;
-        height: 70%;
-        border-color: #57626D;
+        width: 90%;
+        height: 80%;
+        border-color: #555555;
     }
 }
 
@@ -48,7 +48,7 @@
         font-size: 10vh;
     }
     to {
-        font-size: 5vh;
+        font-size: 7vh;
     }
 }
 
@@ -75,7 +75,7 @@ html {
     width: 100%;
     padding: 0;
     margin: 0;
-    background-color: #BCC0C5;
+    background-color: #CCCCCC;
 }
 
 body {
@@ -87,18 +87,18 @@ body {
 }
 
 #main_name {
-    color: #BCC0C5;
+    color: #CCCCCC;
     font-family: 'Roboto', sans-serif;
     font-size: 10vh;
     animation-name: init_fade_in;
-    animation-duration: 2s;
-    animation-delay: 0.5s;
+    animation-duration: 1.0s;
+    animation-delay: 0.1s;
     animation-fill-mode: forwards;
 }
 
 #button_board {
     height: 0%;
-    width: 70%;
+    width: 80%;
     padding-top: 1%;
     padding-bottom: 2%;
     display: flex;
@@ -106,25 +106,25 @@ body {
     justify-content: space-between;
     align-items: center;
     animation-name: init_board_in;
-    animation-duration: 1s;
-    animation-delay: 1.5s;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
     animation-fill-mode: forwards;
 }
 
 .menu_button {
     height: 100%;
-    color: #BCC0C5;
+    color: #CCCCCC;
     animation-name: init_fade_in;
-    animation-duration: 1.5s;
-    animation-delay: 2s;
+    animation-duration: 0.5s;
+    animation-delay: 1s;
     animation-fill-mode: forwards;
 }
 
 .material-icons {
     font-size: 8vh;
     border-width: 3px;
-    border-radius: 5px;
-    border-color: #57626D;
+    border-radius: 6px;
+    border-color: #555555;
 }
 
 #content_box {
@@ -134,7 +134,7 @@ body {
     border-style: dashed;
     border-width: 2px;
     border-radius: 10px;
-    border-color: #BCC0C5;
+    border-color: #CCCCCC;
 }
 
 .content {
@@ -148,25 +148,30 @@ body {
     padding-top: 2%;
     padding-bottom: 2%;
     box-sizing: border-box;
-    color: #57626D;
+    color: #555555;
     font-family: 'Roboto', sans-serif;
-    font-size: 4vh;
+    font-size: 3vh;
 }
 
 .title {
-    padding-bottom: 5vh;
-    font-size: 7vh;
+    padding-bottom: 4vh;
+    font-size: 6vh;
 }
 
 .subtitle {
     display: inline;
     font-weight: bold;
+    font-size: 4vh;
 }
 
 ul {
     margin: 0%;
 }
 
-li {
-    margin: 1vh;
+.spaced_list li {
+    margin: 0 0 4vh 0;
+}
+
+hr {
+    border: 1px solid #555555;
 }
